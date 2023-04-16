@@ -1,0 +1,60 @@
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+group 'Cfa-Automation'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.1.4")
+        classpath("net.serenity-bdd:serenity-single-page-report:2.1.4")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+ext {
+    serenityVersion = '3.2.5'
+    serenityGradleVersion = '2.3.13'
+    serenityCucumberVersion = '3.2.5'
+}
+
+dependencies {
+    implementation 'junit:junit:4.13.1'
+    implementation 'com.dukescript.api:junit-browser-runner:1.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:$rootProject.ext.serenityVersion"
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:3.9.0'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.7'
+    implementation group: 'com.codoid.products', name: 'fillo', version: '1.21'
+    implementation group: 'org.hamcrest', name: 'hamcrest', version:'2.2'
+    implementation group: 'net.serenity-bdd', name: 'serenity-ensure', version: '3.2.5'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2'
+    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: '3.2.5'
+}
+
+test {
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
+
+repositories {
+    mavenCentral()
+}
+
+gradle.startParameter.continueOnFailure = true
