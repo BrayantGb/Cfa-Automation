@@ -38,7 +38,7 @@
 - Clonar el repositorio en la ubicación deseada, usando el comando: git clone https://github.com/BrayantGb/Cfa-Automation
 
 <h2>Evidencia de ejecución</h2>
-- En la carpeta raiz se encuentra un directorio llamado Video allí hay un archivo llamado "EjecucionWebCiencuadras.mp4" el cual evidencia la ejecución de la automatización.
+- En la carpeta raíz se encuentra un directorio llamado Video allí hay un archivo llamado "EvidenciaAutomatizacion.mp4" el cual evidencia la ejecución de la automatización.
 
 <h2>Pasos para ejecutar el proyecto</h2>
 

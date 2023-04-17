@@ -23,27 +23,25 @@ Característica: Realizar 5 escenarios de pruebas
     Ejemplos:
       | IdPrueba |
       | 1        |
-#
-#  @Asociarme
-#  Esquema del escenario: Opcion de como asociarme
-#    Dado El usuario ingresa a la pagina
-#    Cuando el usuario busca la opcion de Como asociarme
-#    Entonces se valida que la pagina nos muestre la informacion como asociarme
+
+  @Asociarme
+  Esquema del escenario: Opcion de como asociarme
+    Dado El usuario ingresa a la pagina
+    Cuando el usuario busca la opcion de Como asociarme
+    Entonces se valida que la pagina nos muestre la informacion como asociarme
 ##    Ejemplos:
-#
-#  @Fundacion
-#  Esquema del escenario: Opcion de Fundacion
-#    Dado El usuario ingresa a la pagina
-#    Cuando el usuario busca la opcion de Fundacion
-#    Entonces se valida que la pagina nos muestre la informacion de la fundacion
+
+  @Fundacion
+  Esquema del escenario: Opcion de Fundacion
+    Dado El usuario ingresa a la pagina
+    Cuando el usuario busca la opcion de Fundacion
+    Entonces se valida que la pagina nos muestre la informacion de la fundacion
 ##    Ejemplos:
-#
-#  @FundacionYEmpleo
-#  Esquema del escenario: Opcion de Fundacion
-#    Dado El usuario ingresa a la pagina
-#    Cuando el usuario busca la opcion de Fundacion
-#    Y ingresa en la opcion de Empleo
-#    Entonces se valida que la pagina nos muestre la informacion empleo
-###    Ejemplos:
-###      | IdPrueba |
-###      | 1        |
+
+  @FundacionYEmpleo
+  Esquema del escenario: Opcion de Fundacion validamos la informacion de empleo
+    Dado El usuario ingresa a la pagina
+    Cuando el usuario busca la opcion de Fundacion
+    Y ingresa en la opcion de Empleo
+    Entonces se valida que la pagina nos muestre la informacion empleo
+#    Ejemplos:

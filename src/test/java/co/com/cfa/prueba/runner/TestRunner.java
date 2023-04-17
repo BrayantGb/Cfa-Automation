@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue = {"co.com.cfa.prueba.stepdefinition", "co.com.cfa.prueba.set.hook"},
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         monochrome = true,
-        tags = "@BusquedaOficina"
+        tags = "@RegressionTest"
 )
 public class TestRunner {
 }
